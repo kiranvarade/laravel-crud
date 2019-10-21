@@ -57,7 +57,7 @@ class employeeController extends Controller
             'emp_email'=>$email,
             'password'=>$hash_password,
         ]);
-        return redirect('/employees');
+        return redirect('/employees')->with('success', 'Data inserted Successfully');
     }
 
     /**
@@ -106,7 +106,7 @@ class employeeController extends Controller
             'emp_email'=>$email,
             'password'=>$hash_password
        ]);
-       return redirect('/employees');
+       return redirect('/employees')->with('success', 'Data  Updated Successfully');
 
         
     }
