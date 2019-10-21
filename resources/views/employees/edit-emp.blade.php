@@ -23,10 +23,7 @@
                <label for="exampleFormControlInput1">Email address</label>
                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" value="{{$employee->emp_email}}" placeholder="name@example.com">   
           </div>
-          <div class="form-group">
-               <label for="name">Password</label>
-               <input type="password"  class="form-control" name="password" placeholder="password">
-          </div>
+          
           <div>
                <button class="btn btn-primary">Update</button>   
                <a href="{{ url('employees') }}" class="btn btn-primary btn " role="button" aria-pressed="true">Back</a>
