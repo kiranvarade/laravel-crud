@@ -8,6 +8,11 @@
   <a href="{{ url('employees/create') }}" class="btn btn-primary btn " role="button" aria-pressed="true">Add Employee </a>
 </div>
 <hr>
+    @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
 			<table class="table ">
 				<thead>
 					<tr>
