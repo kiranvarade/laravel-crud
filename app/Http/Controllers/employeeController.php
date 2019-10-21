@@ -93,18 +93,16 @@ class employeeController extends Controller
     {
         $validatedData = $request->validate([
             'name' => ['required', 'min:2','max:10'],
-            'email'=>['required','email'],
-            'password'=>['required']
+            'email'=>['required','email']            
             
         ]);
         $name = $request->input('name');
-        $password = $request->input('password');
         $email = $request->input('email');
-        $hash_password=Hash::make($password);
+        
         Employee::where('emp_id',$id)->update([
             'emp_name'=>$name,
-            'emp_email'=>$email,
-            'password'=>$hash_password
+            'emp_email'=>$email
+        
        ]);
        return redirect('/employees')->with('success', 'Data  Updated Successfully');
 
